@@ -89,7 +89,7 @@ paypal.Buttons({
             const [startDate, endDate] = range.split(' - ');
 
             // Envoi de l'e-mail
-            fetch('http://localhost:3000/send-confirmation-email', {
+            fetch('https://chalet-novelera.onrender.com/send-confirmation-email', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, name, startDate, endDate, total })
