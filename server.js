@@ -6,7 +6,7 @@ const path = require('path');
 const nodemailer = require('nodemailer');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
@@ -120,5 +120,5 @@ app.post('/add-reservation', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`✅ Serveur en ligne sur http://localhost:${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });
