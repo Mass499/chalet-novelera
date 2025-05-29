@@ -119,7 +119,7 @@ function clearDate() {
 
 async function getBlockedDates() {
     try {
-        const response = await fetch('http://localhost:3000/unavailable-dates');
+        const response = await fetch('https://chalet-novelera.onrender.com/unavailable-dates');
         return await response.json();
     } catch (e) {
         console.error("Erreur récupération dates bloquées:", e);
