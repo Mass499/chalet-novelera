@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Réservation Chalet</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/61523b4b4d.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css" />
+  <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/bundle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/luxon@3/build/global/luxon.min.js"></script>
+  <!-- SDK PayPal (AJOUTE TON CLIENT ID) -->
+  <script
+    src="https://www.paypal.com/sdk/js?client-id=ARlNffPdCNsoUhm7z-3pLPlt7fax-d4UEb3kVBg1Yo45y_aVOOXNl3HXB4oeOYmG4ejK5gR03_t1qM7V&currency=CAD">
+  </script>
+</head>
+
+<body>
+  <!-- Barre de navigation -->
+  <section class="home">
+    <div class="menu">
+      <div class="logo"><a href="index.html"><i class="fa-brands fa-joomla">NovelEra</i></a></div>
+      <button class="openbtn" onclick="openNav()">open</button>
+      <ul class="links">
+        <button class="closebtn" onclick="closeNav()">close</button>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="index.html#Decouvrir">Découvrir</a></li>
+        <li><a href="index.html#Description">Description</a></li>
+        <li><a href="index.html#temoignages">Témoignages</a></li>
+        <li><a href="reservation.html">Réservez</a></li>
+        <li><a href="index.html#carte">Contact</a></li>
+      </ul>
+    </div>
+    <div class="reservation-wrapper">
+      <h2>Réservez votre séjour</h2>
+
+      <label>Choisir date d'arrivée et de départ :
+        <input id="dateRange" type="text" placeholder="Choisir dates">
+        <div class="clear-link" onclick="clearDate()">Effacer</div>
+      </label>
+
+      <!-- <button id="calculateBtn" onclick="onCalculateClick()">Calculer</button> -->
+
+      <div class="total">
+        <p id="nightsLine"></p>
+        <p>Frais de nettoyage : <span id="cleaningFeeLine">250$ CAD</span></p>
+        <p>Taxes : <span id="taxesLine">0$ CAD</span></p>
+        <hr>
+        <p><strong>Total : <span id="totalPrice">0</span>$ CAD</strong></p>
+
+        <!-- Conteneur du bouton -->
+        <div id="paypal-button-container"></div>
+      </div>
+
+    </div>
+  </section>
+  <script src="reservation.js"></script>
+</body>
+
+</html>

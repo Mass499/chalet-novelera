@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agence</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/61523b4b4d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- BOÎTE DE DIALOGUE (Descriptions) -->
+    <div id="modalOverlay" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <span class="commodite-modal-close" onclick="closeModal()">&times;</span>
+            <div class="modal-scroll">
+                <!-- Contenu de la modal -->
+                <h2>À propos de ce logement</h2>
+                <br>
+                <p>
+                    Bienvenue au Chalet NovelEra 🏡, votre refuge idéal toute l'année ! Ce chalet propose 4 chambres, 2
+                    salles de bains modernes, une cuisine équipée 🍽️, et 2 salons 🛋️ pour se détendre...
+                </p>
+                <br>
+                <h3>Le logement</h3>
+                <p>CITQ 308485</p>
+                <p>
+                    Bienvenue au Chalet NovelEra 🏡, votre refuge idéal pour toutes les saisons ! Ce magnifique chalet
+                    dispose de 4 chambres confortables...
+                </p>
+                <br>
+                <h3>Pourquoi choisir le Chalet NovelEra ?</h3>
+                <br>
+                <ul>
+                    <li>
+                        <strong>Accès privé au lac :</strong> Un véritable trésor avec accès direct au lac pour la
+                        baignade...
+                    </li>
+                    <li>
+                        <strong>Confort moderne :</strong> Équipé de tout, des appareils électroménagers aux options de
+                        divertissement...
+                    </li>
+                    <li><strong>Jacuzzi relaxant :</strong> Détendez-vous dans notre jacuzzi extérieur...</li>
+                    <li><strong>Espace extérieur :</strong> Une grande terrasse et un jardin spacieux...</li>
+                </ul>
+                <br>
+
+                <h3>Caractéristiques principales</h3>
+                <ul>
+                    <li>4 chambres confortables et 2 salles de bains complètes</li>
+                    <li>Cuisine entièrement équipée...</li>
+                    <li>Salle de jeux avec billard et baby-foot 🎱</li>
+                    <li>Jacuzzi extérieur, téléviseurs intelligents, WiFi...</li>
+                </ul>
+                <br>
+
+                <h3>Explorez la région</h3>
+                <p>
+                    Situé dans une région riche en activités 🌲... stations de ski, pistes de motoneige, restaurants
+                    locaux...
+                </p>
+                <br>
+
+                <h3>Informations importantes</h3>
+                <ul>
+                    <li><strong>Règles de la maison :</strong> Pas de fêtes ou de bruits excessifs après 22h.</li>
+                    <li><strong>Capacité maximale :</strong> 8 adultes.</li>
+                    <li><strong>Accès au lac :</strong> du 20 mai au 15 octobre.</li>
+                    <li><strong>Réservation :</strong> Pièce d'identité + contrat signé.</li>
+                </ul>
+                <br>
+                <h3>Accès des voyageurs</h3>
+                <p>Liste complète des équipements disponibles et règles d’utilisation (jacuzzi, embarcations, etc.)...
+                </p>
+
+                <p><em>✨ Profitez pleinement de votre séjour au Chalet NovelEra ! ✨</em></p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- BOÎTE DE DIALOGUE (Descriptions) -->
+    <!-- BOÎTE DE DIALOGUE (Modalité) DEBUT -->
+    <div id="commodite-modal" class="commodite-modal">
+        <div class="commodite-modal-content">
+            <span class="commodite-modal-close" onclick="fermerCommoditeModal()">&times;</span>
+            <h2>Pour votre confort</h2>
+
+            <div class="commodite-section-title">Vues panoramiques</div>
+            <ul>
+                <li>🌊 Vue sur lac</li>
+            </ul>
+
+            <div class="commodite-section-title">Salle de bain</div>
+            <ul>
+                <li>💨 Séchoir à cheveux</li>
+                <li>🧴 Produits de nettoyage</li>
+                <li>💧 Eau chaude</li>
+            </ul>
+
+            <div class="commodite-section-title">Chambre</div>
+            <ul>
+                <li>🛌 Serviettes, draps, produits d'hygiène</li>
+                <li>👕 Cintres</li>
+                <li>🛏️ Literie (draps de coton)</li>
+                <li>🧳 Espace de rangement pour les vêtements</li>
+            </ul>
+            <div class="commodite-section-title">Lavage</div>
+            <ul>
+                <li>🧺 Laveuse et Sécheuse gratuite</li>
+                <li>💧 Détergent pour lessive</li>
+            </ul>
+
+
+            <div class="commodite-section-title">Divertissement</div>
+            <ul>
+                <li>📺 Téléviseur HD de 50 pouces</li>
+                <li>🎱 Table de billard</li>
+            </ul>
+
+            <div class="commodite-section-title">Famille</div>
+            <ul>
+                <li>🍼 Lit pour bébé</li>
+                <li>🛏️ Lit standard (1,3 m x 70 cm)</li>
+                <li>👶 Chaise haute au sol</li>
+                <li>🛡️ Barrière de sécurité pour bébé</li>
+            </ul>
+
+            <div class="commodite-section-title">Chauffage et climatisation</div>
+            <ul>
+                <li>❄️ Climatisation</li>
+                <li>🔥 Foyer intérieur</li>
+                <li>🌡️ Chauffage</li>
+            </ul>
+
+            <div class="commodite-section-title">Sécurité</div>
+            <ul>
+                <li>📹 Caméras extérieures (entrée)</li>
+                <li>🔥 Détecteur de fumée</li>
+                <li>🛑 Détecteur de monoxyde de carbone</li>
+                <li>🧯 Extincteur</li>
+                <li>🩹 Trousse de premiers soins</li>
+            </ul>
+
+            <div class="commodite-section-title">Internet et bureau</div>
+            <ul>
+                <li>📶 Wifi</li>
+                <li>💻 Espace de travail (commun)</li>
+            </ul>
+
+            <div class="commodite-section-title">Cuisine et couverts</div>
+            <ul>
+                <li>🍽️ Cuisine complète</li>
+                <li>🧊 Réfrigérateur / congélateur</li>
+                <li>🔥 Cuisinière, four, micro-ondes</li>
+                <li>🧼 Lave-vaisselle</li>
+                <li>☕ Cafetière filtre, bouilloire, grille-pain</li>
+                <li>🍷 Verres à vin</li>
+                <li>🍴 Vaisselle, bols, baguettes, etc.</li>
+                <li>🧂 Batterie de cuisine, huile, sel, poivre</li>
+                <li>🍽️ Table à manger</li>
+            </ul>
+
+            <div class="commodite-section-title">Caractéristiques de l'emplacement</div>
+            <ul>
+                <li>🌅 Bord de l'eau / accès lac par sentier ou quai</li>
+                <li>🚪 Entrée privée</li>
+            </ul>
+
+            <div class="commodite-section-title">Extérieur</div>
+            <ul>
+                <li>🏡 Patio ou balcon privé</li>
+                <li>🌳 Cours </li>
+                <li>🔥 Foyer extérieur</li>
+                <li>🪑 Mobilier extérieur / coin repas</li>
+                <li>🍖 Barbecue</li>
+            </ul>
+
+            <div class="commodite-section-title">Stationnement et installations</div>
+            <ul>
+                <li>🚗 Stationnement gratuit (08 places)</li>
+                <li>🧖‍♀️ Spa privé</li>
+            </ul>
+
+            <div class="commodite-section-title">Services</div>
+            <ul>
+                <li>🐶 Animaux acceptés</li>
+                <li>🦮 Assistance toujours autorisée</li>
+                <li>🔓 Arrivée autonome (serrure intelligente)</li>
+            </ul>
+        </div>
+    </div>
+    <!-- BOÎTE DE DIALOGUE (Modalité) FIN-->
+
+    <!-- Réglements -->
+    <!-- Boîte de dialogue -->
+    <div id="reglement-modal" class="reglement-modal">
+        <div class="reglement-modal-content">
+            <span class="reglement-modal-close" onclick="fermerReglementModal()">&times;</span>
+            <h3 class="reglement-modal-title">Informations Complètes</h3>
+
+            <p><strong>Accès privé au lac :</strong> Un véritable trésor avec accès direct au lac pour la baignade...
+            </p>
+            <p><strong>Confort moderne :</strong> Équipé de tout, des appareils électroménagers aux options de
+                divertissement...</p>
+            <p><strong>Jacuzzi relaxant :</strong> Détendez-vous dans notre jacuzzi extérieur...</p>
+            <p><strong>Espace extérieur :</strong> Une grande terrasse et un jardin spacieux...</p>
+
+            <h4>Caractéristiques principales</h4>
+            <ul>
+                <li>4 chambres confortables et 2 salles de bains complètes</li>
+                <li>Cuisine entièrement équipée</li>
+                <li>Salle de jeux avec billard et baby-foot</li>
+                <li>Jacuzzi extérieur, téléviseurs intelligents, WiFi</li>
+            </ul>
+
+            <h4>Explorez la région</h4>
+            <p>Situé dans une région riche en activités 🌲 : stations de ski, pistes de motoneige, restaurants locaux...
+            </p>
+
+            <h4>Informations importantes</h4>
+            <ul>
+                <li><strong>Règles :</strong> Pas de fêtes ni de bruits excessifs après 22h</li>
+                <li><strong>Capacité maximale :</strong> 8 adultes</li>
+                <li><strong>Accès au lac :</strong> du 20 mai au 15 octobre</li>
+                <li><strong>Réservation :</strong> Pièce d'identité + contrat signé</li>
+            </ul>
+
+            <h4>Accès des voyageurs</h4>
+            <p>Liste complète des équipements disponibles et règles d’utilisation (jacuzzi, embarcations, etc.)...</p>
+            <p><em>✨ Profitez pleinement de votre séjour au Chalet NovelEra ! ✨</em></p>
+        </div>
+    </div>
+    <!-- Réglements -->
+
+    <!-- Home -->
+    <section class="home">
+        <div class="menu">
+            <div class="logo"><a href="index.html"><i class="fa-brands fa-joomla">NovelEra</i></a></div>
+            <button class="openbtn" onclick="openNav()">open</button>
+            <ul class="links">
+                <button class="closebtn" onclick="closeNav()">close</button>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="#Decouvrir">Découvrir</a></li>
+                <li><a href="#Description">Description</a></li>
+                <li><a href="#temoignages">Témoignages</a></li>
+                <li><a href="reservation.html">Réservez</a></li>
+                <li><a href="#carte">Contact</a></li>
+            </ul>
+        </div>
+        <!-- home_page_content -->
+        <div class="home_page_content">
+            <span>
+                <i class="fa-brands fa-bluesky"></i>
+                <p> Pour un séjour paisible et reposant !</p>
+            </span>
+            <h1 class="title">Chalet <br>NovelEra </h1>
+            <p class="text">
+                Offrez-vous un séjour paisible au Chalet Novelera, <br>situé en pleine nature dans la magnifique<br>
+                région de la Matawinie.
+            </p>
+            <button class="white_btn">
+                <a href="#Decouvrir">Découvrir<i class="fa-solid fa-angle-right"></i></a>
+            </button>
+        </div>
+        <!-- image_box -->
+        <a href="#carte">
+            <div class="image_box">
+                <img src="images/Salon1a.avif" alt="image_box">
+                <p><i class="fa-solid fa-location-dot"></i>240 Chemin du Lac du Cerf, St-Côme, Québec J0K 2B0</p>
+
+            </div>
+        </a>
+    </section>
+
+    <!-- text_section -->
+    <section class="text_section">
+        <p>CHALET NOVELERA</p>
+        <h2>
+            Un séjour d’exception <br> Dans un cadre unique où le confort raffiné <br> S’allie à la beauté de la
+            Matawinie.
+        </h2>
+    </section>
+
+    <!-- owner -->
+    <section id="Decouvrir" class="owner">
+        <div class="image_box_owner">
+            <img src="images/Devant 0.avif" alt="image3">
+            <!-- <p>Interrior Solutions Owner & Co-Owner</p> -->
+        </div>
+        <div class="content_box">
+            <h2 class="small_title">NOVELERA</h2>
+            <h3 class="big_title">Présentation</h3>
+            <p>
+                Le Chalet NovelEra est réparti sur deux étages, ce qui le rend parfait pour des séjours en famille ou
+                des
+                retrouvailles entre amis. Avec un accès privé au lac, il offre un environnement convivial pour les
+                enfants, et vous pourrez admirer des vues imprenables depuis la terrasse, tout en vous relaxant dans le
+                jacuzzi ou en profitant des grandes fenêtres du salon principal.
+            </p>
+            <p>
+                Entouré par la nature, le Chalet
+                NovelEra est votre porte d'entrée vers des aventures en plein air, que ce soit pour des vacances d'hiver
+                ❄️ ou un séjour d'été 🌞..
+            </p>
+            <a href="#Galeries">
+                <button class="white_btn dark_btn">Galeries<i class="fa-solid fa-angle-right"></i></button>
+            </a>
+        </div>
+    </section>
+    <!-- debut galerie -->
+
+    <section id="Galeries" class="gal">
+        <div class="filter-buttons">
+            <button class="white_btn dark_btn filter-btn active" data-filter="interieur">Intérieur</button>
+            <button class="white_btn dark_btn filter-btn" data-filter="exterieur">Extérieur</button>
+            <button class="white_btn dark_btn filter-btn" data-filter="alentours">Alentours</button>
+        </div>
+
+        <div class="gallery" id="gallery">
+            <!-- Un seul exemple par sous-catégorie, d'autres seront dans le JS -->
+            <!-- Intérieur -->
+            <div class="pic interieur" data-category="Voir les salons">
+                <img src="images/salonns.avif" alt="Douche 1">
+                <div class="overlay">Voir les salons</div>
+            </div>
+            <div class="pic interieur" data-category="Voir les chambres">
+                <img src="images/Chambres.avif" alt="Chambre 1">
+                <div class="overlay">Voir les chambres</div>
+            </div>
+            <div class="pic interieur" data-category="Voir les salles de bains">
+                <img src="images/Toilettes.avif" alt="Douche 1">
+                <div class="overlay">Voir la cuisine</div>
+            </div>
+            <div class="pic interieur" data-category="Voir la cuisine en entièreté">
+                <img src="images/Salons.avif" alt="Douche 1">
+                <div class="overlay">Voir les salles de bains</div>
+            </div>
+            <div class="pic interieur" data-category="salle à manger">
+                <img src="images/Salons 1.avif" alt="Douche 1">
+                <div class="overlay">Voir la salle à manger</div>
+            </div>
+            <div class="pic interieur" data-category="Sous_sol">
+                <img src="images/Sous-sol.avif" alt="Douche 1">
+                <div class="overlay">Voir la salle à manger</div>
+            </div>
+
+
+            <!-- Extérieur -->
+            <div class="pic exterieur" data-category="Le balcon">
+                <img src="images/Dehors.avif" alt="Jardin 1">
+                <div class="overlay">Jardin</div>
+            </div>
+            <div class="pic exterieur" data-category="La terasse">
+                <img src="images/Dehors.avif" alt="Jardin 1">
+                <div class="overlay">Jardin</div>
+            </div>
+            <div class="pic exterieur" data-category="Le spa">
+                <img src="images/Jaccuzi.avif" alt="Le spa">
+                <div class="overlay">Jardin</div>
+            </div>
+            <div class="pic exterieur" data-category="Cours arrière et avant">
+                <img src="images/Dehors.avif" alt="Jardin 1">
+                <div class="overlay">Jardin</div>
+            </div>
+
+            <!-- Alentours -->
+            <div class="pic alentours" data-category="Le lac">
+                <img src="images/grandlac.avif" alt="Plage 1">
+                <div class="overlay">Plage</div>
+            </div>
+            <div class="pic alentours" data-category="Le paysage">
+                <img src="images/Exterieur 1.avif" alt="Paysage">
+                <div class="overlay">Plage</div>
+            </div>
+        </div>
+
+        <div class="show-more">
+            <button id="showMoreBtn" class="white_btn dark_btn">Afficher tout</button>
+        </div>
+    </section>
+
+    <!-- POPUP MODAL -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">✖</button>
+            <div id="modalGallery" class="modal-gallery">
+                <!-- Images injectées ici -->
+            </div>
+            <div class="viewer" id="viewer">
+                <button id="prevBtn" class="nav-btn left">❮</button>
+                <img id="modalImage" src="" alt="">
+                <div id="imageTitle"></div>
+                <button id="nextBtn" class="nav-btn right">❯</button>
+            </div>
+        </div>
+    </div>
+    <!-- fin galerie-->
+
+    <!-- Background -->
+    <div id="Description" class="background">
+        <div class="text-box">
+            <span>Description</span>
+            <h3>Logement en entier</h3>
+            <p>
+                Bienvenue au Chalet NovelEra 🏡, votre refuge idéal toute l'année ! Ce chalet propose 4 chambres, 2
+                salles de bains modernes, une cuisine équipée 🍽️, et 2 salons 🛋️ pour se détendre. Profitez d'une
+                salle de jeux 🎱, d'un accès direct au lac 🌊, d'un jacuzzi ♨️, et d'embarcations 🚣. Situé dans une
+                région pleine d'activités 🌲, il est parfait pour une retraite hivernale ❄️ ou des vacances d'été 🌞.
+                Idéal pour des vacances en famille ou entre amis. Réservez maintenant et créez des souvenirs
+                inoubliables !
+            </p>
+            <p><button class=" reglement-btn-modal" onclick="openModal()">En savoir plus</button></p>
+
+
+            <h6><i class="fa-solid fa-bed"></i>4 chambres confortables et 2 salles de bains complètes</h6>
+            <h6><i class="fa-solid fa-couch"></i>2 grands salons pour se détendre et se retrouver</h6>
+            <h6><i class="fa-solid fa-kitchen-set"></i>Cuisine entièrement équipée avec des appareils modernes</h6>
+            <h6><i class="fa-solid fa-gamepad"></i>Salle de jeux avec billard et baby-foot</h6>
+            <h6>
+                <i class="fa-solid fa-umbrella-beach"></i>Grand jardin avec accès privé au lac 🌊 et embarcations 🚣
+            </h6>
+            <button class="white_btn dark_btn">
+                <a href="#Commodite">Commodités<i class="fa-solid fa-angle-right"></i></a>
+            </button>
+        </div>
+        <div class="image">
+            <img src="images/Salonns.avif" alt="image2">
+        </div>
+    </div>
+
+    <!-- text_section -->
+    <section id="Commodite" class="text_section big">
+        <p>Chaque espace <br> compte</p>
+        <h2>Pour votre confort</h2>
+    </section>
+
+    <!-- reasons -->
+    <section class="reasons">
+        <div class="services">
+            <div class="box">
+                <i class="fa-solid fa-water"></i>
+                <h2>Bord de l'eau</h2>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-laptop-file"></i>
+                <h2>Espace de travail</h2>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-wifi"></i>
+                <h2>Wifi</h2>
+            </div>
+        </div>
+        <div class="services">
+            <div class="box">
+                <i class="fa-solid fa-square-parking"></i>
+                <h2>Parking</h2>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-hot-tub-person"></i>
+                <h2>Spa privé</h2>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-paw"></i>
+                <h2>Animaux de compagnie acceptés</h2>
+            </div>
+        </div>
+        <div class="services">
+            <div class="box">
+                <i class="fa-solid fa-tv"></i>
+                <h2>TV HD 50"</h2>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-shield"></i>
+                <h2>Sonnette intelligente</h2>
+            </div>
+            <!-- Déclencheur du modal -->
+            <div class="box">
+                <a href="javascript:void(0);" onclick="ouvrirCommoditeModal()">
+                    <i class="fa-solid fa-angles-right"></i>
+                </a>
+                <h2>Plus</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Témoignages Début -->
+    <section id="temoignages" class="testimonial-carousel">
+        <h2 class="small_title">TEMOIGNAGES</h2>
+        <h3 class="big_title">Ce que nos clients disent</h3>
+
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <!-- Témoignage 1 -->
+                <div class="comment">
+                    <p>"Nous avons été très bien accommodé dès notre arrivée... Je recommande 👍"</p>
+                    <div class="profil"><img src="images/isaac.avif" alt=""><span>Isaac</span></div>
+                </div>
+
+                <!-- Témoignage 2 -->
+                <div class="comment">
+                    <p>"Thank you NovelEra, we had a very nice weekend for a family gathering..."</p>
+                    <div class="profil"><img src="images/rachel.avif" alt=""><span>Rachel</span></div>
+                </div>
+
+                <!-- Témoignage 3 -->
+                <div class="comment">
+                    <p>"Le chalet était beau, grand, lumineux... très pratique !"</p>
+                    <div class="profil"><img src="images/alice.avif" alt=""><span>Alice</span></div>
+                </div>
+
+                <!-- Témoignage 4 -->
+                <div class="comment">
+                    <p>"Séjour en famille exceptionnel, merci à Elio! Tout était parfait"</p>
+                    <div class="profil"><img src="images/Caroline.jpg" alt=""><span>Caroline</span></div>
+                </div>
+
+                <!-- Témoignage 5 -->
+                <div class="comment">
+                    <p>"endroit propre et grandes pièces. c'était plus que parfait pour 2 familles."</p>
+                    <div class="profil"><img src="images/eric.avif" alt=""><span>Eric</span></div>
+                </div>
+            </div>
+            <!-- Contrôles -->
+            <button class="carousel-btn prev">&#10094;</button>
+            <button class="carousel-btn next">&#10095;</button>
+        </div>
+    </section>
+    <!-- Témoignages Début -->
+
+    <!-- Réglements Début -->
+    <section>
+        <h2 class="small_title left">Règlement du Chalet</h2>
+    </section>
+    <section class="owner">
+        <div class="image_box_owner">
+            <img src="images/regle.jpg" alt="image3">
+        </div>
+        <div class="content_box">
+            <h2 class="small_title">NOVELERA</h2>
+            <h3 class="big_title">Règlement du Chalet NovelEra</h3>
+            <p>
+            <ul>
+                <li>Heures de silence : 22h à 7h</li>
+                <li>Fêtes interdites, pénalité de 1000 $</li>
+                <li>8 adultes max, 1 petit chien possible (avec dépôt)</li>
+                <li>Jacuzzi : 6 personnes max, 7h à 23h</li>
+                <li>Accès au lac : 6h à 22h, gilet obligatoire</li>
+                <li>Caméras et sécurité : extérieures, surveillance sonore</li>
+                <li>Accès hiver : véhicule 4x4 recommandé</li>
+                <li>Télévision : sans câble, mais smart TV disponible</li>
+                <li>Accès lac & embarcations : 20 mai – 15 octobre</li>
+                <li>Pièce d'identité et contrat requis</li>
+            </ul>
+            <p><em>✨ Profitez pleinement de votre séjour au Chalet NovelEra ! ✨</em></p>
+            </p>
+            <!-- Bouton d'ouverture -->
+            <button onclick="ouvrirReglementModal()" .style.display='block' class=" reglement-btn-modal">
+                En savoir plus
+            </button>
+        </div>
+    </section>
+    <!-- Réglements Début -->
+
+    <!-- Map Début -->
+    <section id="carte">
+        <h2>Où se trouve le Chalet NovelEra ?</h2>
+        <div class="carte-container">
+            <!-- Carte Google Maps -->
+            <div class="carte-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2758.576717596856!2d-73.861305523716!3d46.25864197109808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccf57e3e9dd30a3%3A0xd0b7eaad6cd16fc4!2sChalet%20NovelEra!5e0!3m2!1sfr!2sca!4v1747234801663!5m2!1sfr!2sca"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <!-- Infos de contact -->
+            <div class="carte-info">
+                <h3>Coordonnées</h3>
+                <p><strong>Adresse :</strong><br>
+                    240 Chemin du Lac du Cerf, St-Côme, Québec J0K 2B0
+                </p>
+
+                <p><strong>Téléphone :</strong><br>
+                    <a href="tel:+15146128448">+1 (514) 612-8448</a>
+                </p>
+
+                <p><strong>Email :</strong><br>
+                    <a href="mailto:info@novelera.ca">info@novelera.ca</a>
+                </p>
+
+                <br><br>
+                <button class="white_btn dark_btn">
+                    <a href="reservation.html" style="color: inherit; text-decoration: none;">Réservez<i
+                            class="fa-solid fa-angle-right"></i></a>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Map Fin-->
+
+    <footer>
+        <p>Tous les droits sont réservés &#169;</p>
+    </footer>
+
+    <!-- Script -->
+    <script src="frontend.js"></script>
+</body>
+
+</html>
