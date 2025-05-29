@@ -21,11 +21,6 @@ const icalURL = 'https://www.airbnb.com/calendar/ical/1129826603695867182.ics?s=
 app.get('/unavailable-dates', async (req, res) => {
   try {
     const data = await ical.async.fromURL(icalURL);
-  headers: {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)',
-    'Accept': 'text/calendar, text/plain, */*',
-  }
-    
     const unavailableDates = new Set();
 
     // Airbnb
